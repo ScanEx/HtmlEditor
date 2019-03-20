@@ -11,8 +11,8 @@
             };
         },
         methods: {
-            enable (e) {
-                e.stopPropagation();
+            enable (e) {                
+                e && e.stopPropagation();
                 const {editable} = this.get();
                 if (!editable) {
                     this.refs.content.innerText = decode (this.refs.content.innerHTML);
@@ -21,7 +21,7 @@
                 }
             },
             disable (e) {
-                e.stopPropagation();
+                e && e.stopPropagation();
                 const {editable} = this.get();
                 if (editable) {
                     this.refs.content.innerHTML = this.refs.content.innerText;

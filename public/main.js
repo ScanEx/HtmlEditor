@@ -458,7 +458,7 @@ var Demo = (function () {
   }
   var methods = {
   	enable: function enable(e) {
-  		e.stopPropagation();
+  		e && e.stopPropagation();
 
   		var _get = this.get(),
   		    editable = _get.editable;
@@ -470,7 +470,7 @@ var Demo = (function () {
   		}
   	},
   	disable: function disable(e) {
-  		e.stopPropagation();
+  		e && e.stopPropagation();
 
   		var _get2 = this.get(),
   		    editable = _get2.editable;

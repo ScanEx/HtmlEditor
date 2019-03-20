@@ -457,7 +457,7 @@ function data() {
 }
 var methods = {
 	enable: function enable(e) {
-		e.stopPropagation();
+		e && e.stopPropagation();
 
 		var _get = this.get(),
 		    editable = _get.editable;
@@ -469,7 +469,7 @@ var methods = {
 		}
 	},
 	disable: function disable(e) {
-		e.stopPropagation();
+		e && e.stopPropagation();
 
 		var _get2 = this.get(),
 		    editable = _get2.editable;
