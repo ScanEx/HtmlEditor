@@ -1,0 +1,33 @@
+<svelte:window on:click="disable(event)"/>
+<div class="scanex-html-editor" contenteditable="{editable}" ref:content on:click="enable(event)">{@html value}</div>
+
+<script>
+    import decode from './HtmlDecode.js';
+    export default {
+        data () {
+            return {
+                editable: false,
+                value: ''
+            };
+        },
+        methods: {
+            enable (e) {
+                e.stopPropagation();
+                const {editable} = this.get();
+                if (!editable) {
+                    this.refs.content.innerText = decode (this.refs.content.innerHTML);
+                    this.refs.content.focus();
+                    this.set({editable: true});
+                }
+            },
+            disable (e) {
+                e.stopPropagation();
+                const {editable} = this.get();
+                if (editable) {
+                    this.refs.content.innerHTML = this.refs.content.innerText;
+                    this.set({editable: false, value: this.refs.content.innerHTML});
+                }             
+            },          
+        }
+    };
+</script>

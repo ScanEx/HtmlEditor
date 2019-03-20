@@ -1,0 +1,15 @@
+<HtmlEditor bind:value />
+
+<script>    
+    import HtmlEditor from '../src/HtmlEditor.html';
+    import './App.css';    
+
+    export default {        
+        data () {
+            return {
+                value: '<div style="color: red; font-weight: bold">DEFAULT CONTENT</div>'
+            };
+        },
+        components: { HtmlEditor },        
+    };
+</script>

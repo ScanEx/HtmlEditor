@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Editor Demo</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" charset="utf-8">        
+        <link rel="stylesheet" href="./main.css" charset="utf-8">
+        <script src="./main.js"></script>
+    </head>
+    <body>
+        <div id="demo"></div>
+        <script>
+            var demo = new Demo({target: document.getElementById('demo')});
+            demo.on('state', function (e) {
+                console.log(e);
+            });
+        </script>
+    </body>
+</html>

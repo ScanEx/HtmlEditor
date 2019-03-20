@@ -1,0 +1,11 @@
+#demo {
+    left: 10px;
+    top: 10px;
+    background-color: whitesmoke;
+}
+#demo .scanex-html-editor {
+    height: 200px;
+    width: 400px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
